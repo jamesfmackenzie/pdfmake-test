@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>my first pdfmake example</title>
+    <script src='/node_modules/pdfmake/build/pdfmake.min.js'></script>
+    <script src='pdfmake-test.js'></script>
+</head>
+
+<body>
+    <center>
+        <h2>Enter PDF text here:</h2>
+        <textarea id="pdfInput" style="width:1000px; height:100px;">Latin: Lorem ipsum dolor sit amet, per clita meliore scaevola cu, suscipit lobortis ea has
+Cyrillic: Лорем ипсум долор сит амет, вим цу иудицо импетус сусципиантур, меа виртуте адиписци еу
+Japanese: 残ラナウ線児評険げりがぜ解尚名ほそへ境王ろトら将3民ナサネム固再スに顧3故ツメ統張ん機最だよねま事発トキア費98提は郊両た。
+Chinese: 除供対進傷解校集異害再委口求国員。月型判共間毎野者規大点臨作齢会載者制児。
+Korean: 직전대통령이 없을 때에는 대통령이 지명한다. 중임할 수 없다, 제1항의 지시를 받은 당해 행정기관은 이에 응하여야 한다.</textarea>
+    </center>
+
+    <center>
+        <button style="margin: 30px;" onclick="generatePdf(document.getElementById('pdfInput').value)">Generate PDF</button>
+    </center>
+
+
+    <center>
+        <h2>PDF output here:</h2>
+        <iframe width="1000" height="1000" name="pdf" />
+    </center>
+</body>
+
+</html>
