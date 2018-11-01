@@ -1,6 +1,6 @@
 window.fontsHaveBeenLoaded = false;
 
-function downloadFonts(callback) {
+function downloadVirtualFileSystem(callback) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -14,7 +14,7 @@ function downloadFonts(callback) {
 
 function setupPdfMake(callback) {
     if (!window.fontsHaveBeenLoaded) {
-        downloadFonts(function (vfs) {
+        downloadVirtualFileSystem(function (vfs) {
             pdfMake.vfs = vfs;
 
             pdfMake.fonts = {
